@@ -1,0 +1,79 @@
+,public_metrics,lang,text,conversation_id,created_at,author_id,source,context_annotations,id,possibly_sensitive,reply_settings,entities,attachments,in_reply_to_user_id,referenced_tweets
+0,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",en,"Wordle 318 4/6
+
+⬛⬛🟨🟨⬛
+⬛🟩⬛🟩🟩
+⬛🟩🟩🟩🟩
+🟩🟩🟩🟩🟩",1521351866545811458,2022-05-03T04:52:04.000Z,1080339364432044032,Twitter for iPhone,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351866545811458,False,everyone,,,,
+1,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",en,"Wordle (ES)  #117 3/6
+
+⬜⬜⬜⬜🟩
+⬜⬜🟩⬜🟩
+🟩🟩🟩🟩🟩
+ https://t.co/KW7ZOLuywJ https://t.co/rmpYwYxw9B",1521351849911193600,2022-05-03T04:52:01.000Z,2933210357,Twitter for Android,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351849911193600,False,everyone,"{'urls': [{'start': 42, 'end': 65, 'url': 'https://t.co/KW7ZOLuywJ', 'expanded_url': 'https://wordle.danielfrg.com/', 'display_url': 'wordle.danielfrg.com', 'images': [{'url': 'https://pbs.twimg.com/news_img/1519133738936188928/9bYmUl75?format=jpg&name=orig', 'width': 1200, 'height': 630}, {'url': 'https://pbs.twimg.com/news_img/1519133738936188928/9bYmUl75?format=jpg&name=150x150', 'width': 150, 'height': 150}], 'status': 200, 'title': 'Un juego de palabras diario', 'description': 'Adivina la palabra oculta en 6 intentos. Un nuevo puzzle cada día.', 'unwound_url': 'https://wordle.danielfrg.com/'}, {'start': 66, 'end': 89, 'url': 'https://t.co/rmpYwYxw9B', 'expanded_url': 'https://twitter.com/Tania_and_Bunny/status/1521351849911193600/photo/1', 'display_url': 'pic.twitter.com/rmpYwYxw9B', 'media_key': '16_1521351843950972929'}]}",{'media_keys': ['16_1521351843950972929']},,
+2,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",ja,"日本語のWordle（ローマ字）
+#111
+4/6
+https://t.co/wqPIArQbJw
+⬜ 🟥 🟥 ⬜ ⬜
+🟥 ⬜ ⬜ 🟥 🟩
+⬜ 🟩 🟩 🟩 🟩
+🟩 🟩 🟩 🟩 🟩",1521351849206763520,2022-05-03T04:52:00.000Z,1417413144058556427,Twitter for iPhone,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351849206763520,False,everyone,"{'urls': [{'start': 26, 'end': 49, 'url': 'https://t.co/wqPIArQbJw', 'expanded_url': 'https://wordle-jp.netlify.app/', 'display_url': 'wordle-jp.netlify.app', 'images': [{'url': 'https://pbs.twimg.com/news_img/1518915228284596224/mN5tKbdH?format=jpg&name=orig', 'width': 800, 'height': 420}, {'url': 'https://pbs.twimg.com/news_img/1518915228284596224/mN5tKbdH?format=jpg&name=150x150', 'width': 150, 'height': 150}], 'status': 200, 'title': 'どうも！ • Wordleの日本語バージョンへようこそ', 'description': 'お題の単語を6回のトライで当ててみてください。試行錯誤のゲームです。', 'unwound_url': 'https://wordle-jp.netlify.app/'}]}",,,
+3,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",en,"Wordle (ES)  #117 5/6
+
+⬜⬜⬜⬜⬜
+🟨🟩⬜⬜🟩
+⬜🟩🟩⬜🟩
+⬜🟩🟩⬜🟩
+🟩🟩🟩🟩🟩
+ https://t.co/D4eKJ3wIb4",1521351829464006662,2022-05-03T04:51:56.000Z,109343037,Twitter for iPhone,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351829464006662,False,everyone,"{'urls': [{'start': 54, 'end': 77, 'url': 'https://t.co/D4eKJ3wIb4', 'expanded_url': 'https://wordle.danielfrg.com/', 'display_url': 'wordle.danielfrg.com', 'images': [{'url': 'https://pbs.twimg.com/news_img/1519133738936188928/9bYmUl75?format=jpg&name=orig', 'width': 1200, 'height': 630}, {'url': 'https://pbs.twimg.com/news_img/1519133738936188928/9bYmUl75?format=jpg&name=150x150', 'width': 150, 'height': 150}], 'status': 200, 'title': 'Un juego de palabras diario', 'description': 'Adivina la palabra oculta en 6 intentos. Un nuevo puzzle cada día.', 'unwound_url': 'https://wordle.danielfrg.com/'}]}",,,
+4,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",en,"Wordle 318 5/6
+
+⬜⬜🟨⬜⬜
+⬜⬜🟨⬜⬜
+⬜🟩⬜⬜🟨
+⬜🟩🟨⬜🟨
+🟩🟩🟩🟩🟩",1521351825966120960,2022-05-03T04:51:55.000Z,25260021,Twitter for iPhone,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351825966120960,False,everyone,,,,
+5,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",en,"@almuckersie Wordle 318 3/6
+
+🟩⬛⬛⬛⬛
+⬛🟨🟨🟨⬛
+🟩🟩🟩🟩🟩
+
+Oh, yess!!",1521269608501719040,2022-05-03T04:51:53.000Z,295803948,Twitter for iPad,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351820358168576,False,everyone,"{'mentions': [{'start': 0, 'end': 12, 'username': 'almuckersie', 'id': '228408417'}]}",,228408417,"[{'type': 'replied_to', 'id': '1521269608501719040'}]"
+6,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",und,"@theonclejack @Lisanlussapa @MonicaBarcelona @emateug @louloucruz @Esquitx17 @ehecatram @YoseRosa @EstacioSEDR @bibisole1 @FerranReloaded 😵‍💫
+
+#WordleCAT 123 4/6
+
+⬜⬜🟨⬜🟩
+⬜🟨⬜🟨🟩
+🟩🟩⬜🟩🟩
+🟩🟩🟩🟩🟩
+
+https://t.co/mbeJGx6AXU",1521348481268428800,2022-05-03T04:51:52.000Z,1194873103618363392,Twitter for iPhone,,1521351815018729476,False,everyone,"{'hashtags': [{'start': 143, 'end': 153, 'tag': 'WordleCAT'}], 'urls': [{'start': 188, 'end': 211, 'url': 'https://t.co/mbeJGx6AXU', 'expanded_url': 'http://wordle.gelozp.com', 'display_url': 'wordle.gelozp.com', 'images': [{'url': 'https://pbs.twimg.com/news_img/1520479054184468480/yryaukBy?format=png&name=orig', 'width': 400, 'height': 400}, {'url': 'https://pbs.twimg.com/news_img/1520479054184468480/yryaukBy?format=png&name=150x150', 'width': 150, 'height': 150}], 'status': 200, 'title': 'WordleCAT - Un mot diari', 'description': 'Endevina el mot amagat en 6 intents. Cada dia hi ha un nou mot per endevinar.', 'unwound_url': 'https://wordle.gelozp.com/'}], 'mentions': [{'start': 0, 'end': 13, 'username': 'theonclejack', 'id': '1312152527924875264'}, {'start': 14, 'end': 27, 'username': 'Lisanlussapa', 'id': '262575379'}, {'start': 28, 'end': 44, 'username': 'MonicaBarcelona', 'id': '301979778'}, {'start': 45, 'end': 53, 'username': 'emateug', 'id': '851861378730274819'}, {'start': 54, 'end': 65, 'username': 'louloucruz', 'id': '232585674'}, {'start': 66, 'end': 76, 'username': 'Esquitx17', 'id': '399564452'}, {'start': 77, 'end': 87, 'username': 'ehecatram', 'id': '1178043378019291136'}, {'start': 88, 'end': 97, 'username': 'YoseRosa', 'id': '2259516811'}, {'start': 98, 'end': 110, 'username': 'EstacioSEDR', 'id': '1035437066283311105'}, {'start': 111, 'end': 121, 'username': 'bibisole1', 'id': '2156243057'}, {'start': 122, 'end': 137, 'username': 'FerranReloaded', 'id': '1403486789957005319'}]}",,1312152527924875264,"[{'type': 'replied_to', 'id': '1521348481268428800'}]"
+7,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",en,"@buzwepama Wordle 318 5/6
+
+⬛🟨🟨🟨⬛
+🟨🟩🟩⬛🟩
+⬛🟩🟩🟩🟩
+⬛🟩🟩🟩🟩
+🟩🟩🟩🟩🟩
+
+felt that",1521351452903542789,2022-05-03T04:51:52.000Z,1500715044027473921,Twitter for iPhone,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351813492051970,False,everyone,"{'mentions': [{'start': 0, 'end': 10, 'username': 'buzwepama', 'id': '52375003'}]}",,52375003,"[{'type': 'replied_to', 'id': '1521351452903542789'}]"
+8,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",ja,"ポケモンWordle 4/10
+
+⬛⬛⬛⬛⬛
+⬛🟨⬛⬛⬛
+🟩⬛⬛⬛🟩
+🟩🟩🟩🟩🟩
+
+https://t.co/qYRxpPSqGY
+ #ポケモンWordle",1521351801714651136,2022-05-03T04:51:49.000Z,1501897458443780100,Twitter for iPhone,"[{'domain': {'id': '45', 'name': 'Brand Vertical', 'description': 'Top level entities that describe a Brands industry'}, 'entity': {'id': '781974597310615553', 'name': 'Entertainment'}}, {'domain': {'id': '46', 'name': 'Brand Category', 'description': 'Categories within Brand Verticals that narrow down the scope of Brands'}, 'entity': {'id': '781974597218340864', 'name': 'Video Games'}}, {'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}, {'domain': {'id': '130', 'name': 'Multimedia Franchise', 'description': ""Franchises which span multiple forms of media like 'Harry Potter'""}, 'entity': {'id': '10045599546', 'name': 'Pokémon', 'description': 'This entity includes all conversation about the franchise, as well as any individual installments in the series, if applicable. **NOTE: Annotations redirected to domain 130 ONLY on 8/7/18.'}}]",1521351801714651136,False,everyone,"{'hashtags': [{'start': 67, 'end': 78, 'tag': 'ポケモンWordle'}], 'urls': [{'start': 42, 'end': 65, 'url': 'https://t.co/qYRxpPSqGY', 'expanded_url': 'https://wordle.mega-yadoran.jp/', 'display_url': 'wordle.mega-yadoran.jp', 'images': [{'url': 'https://pbs.twimg.com/news_img/1520627181159784450/oEzApr9k?format=png&name=orig', 'width': 200, 'height': 200}, {'url': 'https://pbs.twimg.com/news_img/1520627181159784450/oEzApr9k?format=png&name=150x150', 'width': 150, 'height': 150}], 'status': 200, 'title': 'ポケモンWordle', 'description': 'ポケモンWordle (ポケモンワードル)は単語当てゲーム「Wordle」のポケモン版。１０回のチャレンジでポケモンの名前を当てよう！', 'unwound_url': 'https://wordle.mega-yadoran.jp/'}]}",,,
+9,"{'retweet_count': 0, 'reply_count': 0, 'like_count': 0, 'quote_count': 0}",en,"Wordle (ES)  #117 5/6
+
+⬜🟩🟩🟨⬜
+⬜🟩🟩⬜🟩
+⬜🟩🟩⬜🟩
+⬜🟩🟩⬜🟩
+🟩🟩🟩🟩🟩
+ https://t.co/H2ObKcpYsh",1521351801156550657,2022-05-03T04:51:49.000Z,374172093,Twitter Web App,"[{'domain': {'id': '30', 'name': 'Entities [Entity Service]', 'description': 'Entity Service top level domain, every item that is in Entity Service should be in this domain'}, 'entity': {'id': '1480827185451573250', 'name': 'Wordle'}}]",1521351801156550657,False,everyone,"{'urls': [{'start': 54, 'end': 77, 'url': 'https://t.co/H2ObKcpYsh', 'expanded_url': 'https://wordle.danielfrg.com/', 'display_url': 'wordle.danielfrg.com', 'images': [{'url': 'https://pbs.twimg.com/news_img/1519133738936188928/9bYmUl75?format=jpg&name=orig', 'width': 1200, 'height': 630}, {'url': 'https://pbs.twimg.com/news_img/1519133738936188928/9bYmUl75?format=jpg&name=150x150', 'width': 150, 'height': 150}], 'status': 200, 'title': 'Un juego de palabras diario', 'description': 'Adivina la palabra oculta en 6 intentos. Un nuevo puzzle cada día.', 'unwound_url': 'https://wordle.danielfrg.com/'}]}",,,
