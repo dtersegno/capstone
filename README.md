@@ -1,13 +1,18 @@
 
 # to do
 
+- gather data from missing region in 5-04. Or account for it.
+
 - fix user data assignment to tweets by tweet id. There are way too many missing users!
-- solve low-number tweets from May 3. There used to be a bunch! Why is this getting dumped?
+- ~~solve low-number tweets from May 3. There used to be a bunch! Why is this getting dumped?~~ **duplicates by id were thrown out in 3_data_cleanup before saving merged_tweets.csv.**
+     - look at results of new merged_tweets without duplicate values. 
 - continue adding bools or classifications for tweet types.
     - by specific game (pokemon, catalan, french, wordle proper, framed, etc)
         - ~~is_poke~~
         - should this be a single string column for now, just to accommodate the large number of different games?
     - ~~by win/lose~~
+- check if time_since_last_tweet or tweet rate is poisson-distributed
+    - (treating as random processes with a set average rate)
 - make tweet rate irregular time series of each type
     - legit wordle
     - poke
