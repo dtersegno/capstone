@@ -2,5 +2,7 @@ merged_data/merged_tweets.csv
 merged_data/merged_users.csv
 merged_users.csv
 merged_tweets.csv
+resampled_tudf_minute.csv
+merged_data/resampled_tudf_minute.csv
 
 .ipynb_checkpoints
