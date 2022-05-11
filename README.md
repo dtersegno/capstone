@@ -39,6 +39,10 @@ End of May 10
     - fft?
     
 ### time series
+- apply simple ff neural network, like o-text method.
+    - ~~lagged by 20 minutes, 20 values, rate 60 
+        -
+    - lagged values, along with some info bools, day-lagged, hour-lagged values.
 - apply dickey-fuller to detrended series
 - just try arima to see if it even makes any sense.
 - install extra timeseries libraries for fbprophet [instructions](https://github.com/microprediction/timemachines/blob/main/INSTALL.md)
