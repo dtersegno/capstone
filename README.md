@@ -1,25 +1,27 @@
 
 # to do
 
+
+### leftover tweets
 End of May 10
-442,087 Tweets pulled of 500,000. save the rest for special cases
+442,087 Tweets pulled of 500,000 total. save the rest for special cases.
 
 
 ### data gathering
-- gather data from missing region in 5-04. Or account for it.
+- ~~gather data from missing region in 5-04. Or account for it.
 
 ### data cleaning
 - ~~fix user data assignment to tweets by tweet id. There are way too many missing users!
-    - this isn't a problem with the merge. These ids are missing in the original data. A lot of the original user data is suspect, unfortunately. Many of the ids in users do not match a tweet in tweets and vice versa.
+    - ~~this isn't a problem with the merge. These ids are missing in the original data. A lot of the original user data is suspect, unfortunately. Many of the ids in users do not match a tweet in tweets and vice versa. ---> User data is missing from the start.
 - ~~solve low-number tweets from May 3. There used to be a bunch! Why is this getting dumped?~~ **duplicates by id were thrown out in 3_data_cleanup before saving merged_tweets.csv.**
-     - look at results of new merged_tweets without duplicate values. 
+     - ~~look at results of new merged_tweets without duplicate values. 
 - continue adding bools or classifications for tweet types.
     - by specific game (pokemon, catalan, french, wordle proper, framed, etc)
         - ~~is_poke~~
         - should this be a single string column for now, just to accommodate the large number of different games?
     - ~~by win/lose~~
     
-### eda
+### preprocessing
 - check if time_since_last_tweet or tweet rate is poisson-distributed
     - (treating as random processes with a set average rate)
 - make tweet rate irregular time series of each type
@@ -39,15 +41,23 @@ End of May 10
     - fft?
     
 ### time series
-- apply simple ff neural network, like o-text method.
+- NNs
+    - ~~apply simple ff neural network, like o-text method.
     - ~~lagged by 20 minutes, 20 values, rate 60 
-        -
     - lagged values, along with some info bools, day-lagged, hour-lagged values.
+    - NN on single-valued rates for each type of game. 
+    - NN on single-valued rates, with rates of other games, game-type bools tossed in
+- Compare model to "nulls"
+    - a sum of sines/exponential decays pinged by time
+    - simply the rate a day before
+    - average of rate in a window day before, or several days
 - apply dickey-fuller to detrended series
-- just try arima to see if it even makes any sense.
-- install extra timeseries libraries for fbprophet [instructions](https://github.com/microprediction/timemachines/blob/main/INSTALL.md)
-- compare different functions
-- apply these time series' to timemachines functionality
+    - de-trending may be illustrative only with the NN model.
+- ~~just try arima to see if it even makes any sense.
+    - ~~it doesn't
+- ~~install extra timeseries libraries for fbprophet [instructions](https://github.com/microprediction/timemachines/blob/main/INSTALL.md)
+- ~~compare different functions
+- ~~apply these time series' to timemachines functionality
     - fbprophet
     - greykite
     - other "heavy hitters"
