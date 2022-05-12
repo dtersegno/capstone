@@ -67,6 +67,9 @@ End of May 10
 - plot game use by country with animation
 
 
+### formatting and presentation
+
+
 # General Assembly Capstone Project
 
 ## problem statement
