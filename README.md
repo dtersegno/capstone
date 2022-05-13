@@ -2,6 +2,23 @@
 # to do
 
 
+### morning may 12
+- OHE:
+    - locations
+    - languages
+    - game types
+    - hour
+    - win?
+- new column for minute
+- create window of values to check at 24 H lag, with window size W
+- create window of values behind current, with a delay. We want to predict up to 15 minutes ahead. (?)
+- run gridsearch with ALL NNs with:
+    - varying window size for
+        - 24 h lag (up to 30 minute window)
+        - immediate past (up to 20 minute window)
+    - number of recent minutes to mask (0, 5, 10, 15, 20)
+    - size of rolling average (5, 10, 15, 20, 30, 60)
+
 ### leftover tweets
 End of May 10
 442,087 Tweets pulled of 500,000 total. save the rest for special cases.
