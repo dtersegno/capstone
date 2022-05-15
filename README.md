@@ -15,15 +15,13 @@ The game owes its popularity partly to its simplicity, accessibility, and the dr
 
 This example's shareable text:
 
+```
 Wordle 329 4/6
-
 🟨⬜⬜⬜🟨
-
 ⬜⬜⬜⬜🟨
-
 🟨🟩🟨⬜⬜
-
 🟩🟩🟩🟩🟩
+```
 
 ## problem statement
 
