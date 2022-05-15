@@ -47,7 +47,7 @@ Data were gathered using the Twitter API v2.
 
 Gathered Twitter data for the search '🟩 Wordle' For over the first few days of May '22. The inclusion of the green square forces the search to focus on tweets that share the results of Wordle games.
 
-### processed data
+## processed data
 The processed data fed into the models is a value for every minute during the period between April 29, 2022 19:46 UTC and May 5, 2022 21:59 UTC.
 
 | name | type | description |
@@ -169,6 +169,52 @@ The processed data fed into the models is a value for every minute during the pe
 | broad_location_is_MY| float64 | fraction of tweets whose user reports from Malaysia |
 | broad_location_is_CAM| float64 | fraction of tweets whose user reports from Canada mountain time |
 | broad_location_is_CO| float64 | fraction of tweets whose user reports from Colombia |
+
+
+## raw data
+
+Data gathered from Twitter was in response to an API v2 search for '🟩 Wordle', which returns tweets that have at least one green square and one instance of 'Wordle' within their text.
+[Twitter API v2 docs](https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent)
+
+### tweets
+
+| name | type | description |
+| --- | --- | --- |
+| id | int |  unique tweet identifier |
+| conversation_id | int | identifier for "root" tweet. Same as id if not a reply or retweet. |
+| reply_settings | str | Who may reply to this tweet |
+| lang | str | Twitter-assigned language |
+| entities | str (json) | Dictionary of objects like url links within the tweet |
+| possibly_sensitive | bool | Twitter-assigned sensitivity rating |
+| source | str | name of software used to tweet |
+| public_metrics | str (json) | Dictionary of counts of retweets, replies, likes, quotes |
+| text | str | The text of the tweet |
+| context_annotations| str (list of jsons) | Twitter-assigned context values, like franchises or topics |
+| author_id | int | unique identifier of the author |
+| created_at | str | UTC time of tweet submission |
+| referenced_tweets | int | id or list of ids of any referenced, retweeted, quoted tweets |
+| in_reply_to_user_id | int | unique identifier of user who posted tweet this tweet replies to |
+| attachments | str (json) | information for attached media |
+| geo | int | unique geographic location, if shared |
+| withheld | bool | whether the tweet has been withheld for legal demand |
+
+### users
+
+| name | type | description |
+| --- | --- | --- |
+| id | int | unique identifier of user. Same as a tweet's `author_id` |
+| name | str | Name of user |
+| public_metrics | str (json) | followers and following counts |
+| url | str | User-shared url |
+| description | str | User's description |
+| profile_image_url | str | link to profile image |
+| location | str | User-written location |
+| protected | bool | Privacy setting |
+| username | str | Username (following the @) |
+| verified | bool | whether the user is Twitter verified |
+| entities| str (json) | information on any included media or urls |
+| pinned_tweet_id | int | unique identifier for a user's currently pinned tweet |
+| withheld | bool | whether the account has been suspended |
 
 ---
 Models
