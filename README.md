@@ -81,34 +81,61 @@ The processed data fed into the models is a value for every minute during the pe
 | language_is_Danish  | float64 | fraction of tweets identified as Danish by Twitter |
 | language_is_Welsh  | float64 | fraction of tweets identified as Welsh by Twitter |
 | language_is_Swedish  | float64 | fraction of tweets identified as Swedish by Twitter |
-|game_from_hashtag_ポケモンWordle|float64 |
-|game_from_hashtag_Wordle|float64 |
-|game_from_hashtag_wordle|float64 |
-|game_from_hashtag_WordleCAT|float64 |
-|game_from_hashtag_вордли|float64 |
-| game_from_hashtag_Heardle|float64 |
- |game_from_hashtag_워들|float64 |
- |game_from_hashtag_한글|float64 |
- |game_from_hashtag_Korean|float64 |
- |game_from_hashtag_wordleTR|float64 |
- |game_from_hashtag_AlWird|float64 |
- |game_from_hashtag_galego|float64 |
- |game_from_hashtag_WordleGalego|float64 |
- |game_from_hashtag_DailyWordleClub|float64 |
- |game_from_hashtag_WordleEnglish|float64 |
- |game_from_hashtag_WordleEN|float64 |
- |game_from_hashtag_WordleEUS|float64 |
- |game_from_hashtag_hadesjSlova|float64 |
- |game_from_hashtag_WORDLE_TAMIL|float64 |
- |game_from_hashtag_WizardingWordle|float64 |
- |game_from_hashtag_Enstarsdle|float64 |
- |game_from_hashtag_WordleEspañol|float64 |
- |game_from_hashtag_wordleES|float64 |
- |game_from_hashtag_嘘wordle|float64 |
- |game_from_hashtag_百人一首Wordle|float64 |
- |game_from_hashtag_Quordle|float64 |
- |game_from_hashtag_ことのはたんご|float64 |
- |game_from_hashtag_NYTimes|float64 |
+| --- | --- | --- |
+|game_from_hashtag_ポケモンWordle| float64 | fraction of tweets identified as Pokemon JP from hashtag |
+|game_from_hashtag_Wordle|float64 | fraction of tweets identified as Wordle from hashtag |
+|game_from_hashtag_wordle|float64 | fraction of tweets identified as wordle from hashtag |
+|game_from_hashtag_WordleCAT|float64 |  fraction of tweets identified as Wordle Catalan from hashtag |
+|game_from_hashtag_вордли|float64 | fraction of tweets identified as Wordle Russian from hashtag |
+| game_from_hashtag_Heardle|float64 |  fraction of tweets identified as Heardle from hashtag
+ |game_from_hashtag_워들|float64 |  fraction of tweets identified as Wordle Korean from hashtag |
+ |game_from_hashtag_한글|float64 |  fraction of tweets identified as Wordle Korean from hashtag |
+ |game_from_hashtag_Korean|float64 | fraction of tweets identified as Wordle Korean from hashtag |
+ |game_from_hashtag_wordleTR|float64 |  fraction of tweets identified as Wordle Turkish from hashtag |
+ |game_from_hashtag_AlWird|float64 | fraction of tweets identified as Wordle Arabic from hashtag |
+ |game_from_hashtag_galego|float64 | fraction of tweets identified as Galician from hashtag |
+ |game_from_hashtag_WordleGalego|float64 |  fraction of tweets identified as Galician from hashtag |
+ |game_from_hashtag_DailyWordleClub|float64 | fraction of tweets associated with a Daily Wordle Club from hashtag |
+ |game_from_hashtag_WordleEnglish|float64 | fraction of tweets identified as Wordle English from hashtag |
+ |game_from_hashtag_WordleEN|float64 | fraction of tweets identified as Wordle English from hashtag |
+ |game_from_hashtag_WordleEUS|float64 | fraction of tweets identified as Wordle Basque from hashtag |
+ |game_from_hashtag_hadesjSlova|float64 |  fraction of tweets identified as Wordle Czech from hashtag |
+ |game_from_hashtag_WORDLE_TAMIL|float64 | fraction of tweets identified as Wordle Tamil from hashtag |
+ |game_from_hashtag_WizardingWordle|float64 |  fraction of tweets identified as Wizarding Wordle from hashtag |
+ |game_from_hashtag_Enstarsdle|float64 |  fraction of tweets identified as Enstars Wordle from hashtag |
+ |game_from_hashtag_WordleEspañol|float64 |  fraction of tweets identified as Spanish from hashtag |
+ |game_from_hashtag_wordleES|float64 |  fraction of tweets identified as Spanish from hashtag |
+ |game_from_hashtag_嘘wordle|float64 |  fraction of tweets identified as Japanese from hashtag |
+ |game_from_hashtag_百人一首Wordle|float64 | fraction of tweets identified as Japanese from hashtag |
+ |game_from_hashtag_Quordle|float64 |  fraction of tweets identified as Quordle from hashtag |
+ |game_from_hashtag_ことのはたんご|float64 |  fraction of tweets identified as Kotonoha Wordle from hashtag |
+ |game_from_hashtag_NYTimes|float64 | fraction of tweets identified as NYTimes Wordle from hashtag |
+| --- | --- | --- |
+|broad_location_is_USAE | float64 | fraction of tweets whose user reports from USA eastern time |
+|broad_location_is_UK| float64 | fraction of tweets whose user reports from United Kingdom|
+| broad_location_is_JPN| float64 | fraction of tweets whose user reports from Japan |
+| broad_location_is_ES| float64 | fraction of tweets whose user reports from Spain |
+| broad_location_is_USAC| float64 | fraction of tweets whose user reports from USA central time |
+|broad_location_is_USA| float64 | fraction of tweets whose user reports from USA |
+| broad_location_is_USAW| float64 | fraction of tweets whose user reports from USA western time |
+| broad_location_is_IN| float64 | fraction of tweets whose user reports from India |
+| broad_location_is_ASTL| float64 | fraction of tweets whose user reports from Australia|
+| broad_location_is_CAE| float64 | fraction of tweets whose user reports from Canada eastern time |
+| broad_location_is_AR| float64 | fraction of tweets whose user reports from Argentina|
+| broad_location_is_USAM| float64 | fraction of tweets whose user reports from USA mountain time |
+| broad_location_is_IE| float64 | fraction of tweets whose user reports from Ireland |
+| broad_location_is_TK| float64 | fraction of tweets whose user reports from Turkey|
+| broad_location_is_CA| float64 | fraction of tweets whose user reports from Catalonia |
+| broad_location_is_MX| float64 | fraction of tweets whose user reports from Mexico |
+| broad_location_is_PH| float64 | fraction of tweets whose user reports from The Phillipines |
+| broad_location_is_NZ| float64 | fraction of tweets whose user reports from New Zealand |
+| broad_location_is_CL| float64 | fraction of tweets whose user reports from Chile |
+| broad_location_is_SA| float64 | fraction of tweets whose user reports from South Africa |
+| broad_location_is_EUR| float64 | fraction of tweets whose user reports from Europe |
+| broad_location_is_CAW| float64 | fraction of tweets whose user reports from Canada western time |
+| broad_location_is_MY| float64 | fraction of tweets whose user reports from Malaysia |
+| broad_location_is_CAM| float64 | fraction of tweets whose user reports from Canada mountain time |
+| broad_location_is_CO| float64 | fraction of tweets whose user reports from Colombia |
 
 ---
 Models
