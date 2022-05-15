@@ -51,13 +51,9 @@ Gathered Twitter data for the search '🟩 Wordle' For over the first few days o
 The processed data fed into the models is a value for every minute during the period between April 29, 2022 19:46 UTC and May 5, 2022 21:59 UTC.
 
 | name | type | description |
-| ---- | ---  |  ---------- |
-| times | --- | --- |
 | --- | --- | --- |
 | hour | int64 | hour of day, UTC |
 | minute | int64 | minute of the hour |
-| --- | --- | --- |
-| tweet rates | --- | --- |
 | --- | --- | --- |
 | is_wordle | float64 | Fraction of tweets within the minute referring to a game of Wordle proper, from the NY Times. One of two targets. |
 | total_tweets | int64 | Number of total tweets during the minute. One of two targets. |
@@ -93,8 +89,6 @@ The processed data fed into the models is a value for every minute during the pe
 | lag_day_9 | float64 | Number of total tweets one day minus nine minutes lagged |
 | lag_day_10 | float64 | Number of total tweets one day minus ten minutes lagged |
 | --- | --- | --- |
-| languages | --- | --- |
-| --- | --- | --- |
 | language_is_English | float64 | fraction of tweets identified as English by Twitter |
 | language_is_Japanese | float64 | fraction of tweets identified as Japanese by Twitter |
 | language_is_Spanish | float64 | fraction of tweets identified as Spanish by Twitter |
@@ -120,8 +114,6 @@ The processed data fed into the models is a value for every minute during the pe
 | language_is_Danish  | float64 | fraction of tweets identified as Danish by Twitter |
 | language_is_Welsh  | float64 | fraction of tweets identified as Welsh by Twitter |
 | language_is_Swedish  | float64 | fraction of tweets identified as Swedish by Twitter |
-| --- | --- | --- |
-| games | --- | --- |
 | --- | --- | --- |
 |game_from_hashtag_ポケモンWordle| float64 | fraction of tweets identified as Pokemon JP from hashtag |
 |game_from_hashtag_Wordle|float64 | fraction of tweets identified as Wordle from hashtag |
@@ -151,8 +143,6 @@ The processed data fed into the models is a value for every minute during the pe
  |game_from_hashtag_Quordle|float64 |  fraction of tweets identified as Quordle from hashtag |
  |game_from_hashtag_ことのはたんご|float64 |  fraction of tweets identified as Kotonoha Wordle from hashtag |
  |game_from_hashtag_NYTimes|float64 | fraction of tweets identified as NYTimes Wordle from hashtag |
-| --- | --- | --- |
-| locations | --- | --- |
 | --- | --- | --- |
 |broad_location_is_USAE | float64 | fraction of tweets whose user reports from USA eastern time |
 |broad_location_is_UK| float64 | fraction of tweets whose user reports from United Kingdom|
