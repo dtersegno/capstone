@@ -52,10 +52,49 @@ The processed data fed into the models is a value for every minute during the pe
 
 | name | type | description |
 | ---- | ---  |  ---------- |
+| times | --- | --- |
+| --- | --- | --- |
+| hour | int64 | hour of day, UTC |
+| minute | int64 | minute of the hour |
+| --- | --- | --- |
+| tweet rates | --- | --- |
+| --- | --- | --- |
 | is_wordle | float64 | Fraction of tweets within the minute referring to a game of Wordle proper, from the NY Times. One of two targets. |
 | total_tweets | int64 | Number of total tweets during the minute. One of two targets. |
-| hour | int64 | hour of day, UTC |
-| minute | int64 | minute of the hour | 
+|lag_10| float64 | Number of total tweets ten minutes lagged |
+|lag_11|  float64 | Number of total tweets eleven minutes lagged |
+|lag_12| float64 | Number of total tweets twelve minutes lagged |
+|lag_13| float64 | Number of total tweets thirteen minutes lagged |
+|lag_14| float64 | Number of total tweets fourteen minutes lagged |
+|lag_15| float64 | Number of total tweets fifteen minutes lagged |
+|lag_16| float64 | Number of total tweets sixteen minutes lagged |
+|lag_17| float64 | Number of total tweets seventeen minutes lagged |
+|lag_18| float64 | Number of total tweets eighteen minutes lagged |
+|lag_19| float64 | Number of total tweets nineteen minutes lagged |
+| lag_day_-10 | float64 | Number of total tweets one day and ten minutes lagged |
+| lag_day_-9 | float64 | Number of total tweets one day and nine minutes lagged |
+| lag_day_-8 | float64 | Number of total tweets one day and eight minutes lagged |
+| lag_day_-7 | float64 | Number of total tweets one day and seven minutes lagged |
+| lag_day_-6 | float64 | Number of total tweets one day and six minutes lagged |
+| lag_day_-5 | float64 | Number of total tweets one day and five minutes lagged |
+| lag_day_-4 | float64 | Number of total tweets one day and four minutes lagged |
+| lag_day_-3 | float64 | Number of total tweets one day and three minutes lagged |
+| lag_day_-2 | float64 | Number of total tweets one day and two minutes lagged |
+| lag_day_-1 | float64 | Number of total tweets one day and one minute lagged |
+| lag_day_0 | float64 | Number of total tweets one day lagged |
+| lag_day_1 | float64 | Number of total tweets one day minus one minute lagged |
+| lag_day_2 | float64 | Number of total tweets one day minus two minutes  lagged |
+| lag_day_3 | float64 | Number of total tweets one day minus three minutes  lagged |
+| lag_day_4 | float64 | Number of total tweets one day minus four minutes lagged |
+| lag_day_5 | float64 | Number of total tweets one day minus five minutes lagged |
+| lag_day_6 | float64 | Number of total tweets one day minus six minutes lagged |
+| lag_day_7 | float64 | Number of total tweets one day minus seven minutes lagged |
+| lag_day_8 | float64 | Number of total tweets one day minus eight minutes lagged |
+| lag_day_9 | float64 | Number of total tweets one day minus nine minutes lagged |
+| lag_day_10 | float64 | Number of total tweets one day minus ten minutes lagged |
+| --- | --- | --- |
+| languages | --- | --- |
+| --- | --- | --- |
 | language_is_English | float64 | fraction of tweets identified as English by Twitter |
 | language_is_Japanese | float64 | fraction of tweets identified as Japanese by Twitter |
 | language_is_Spanish | float64 | fraction of tweets identified as Spanish by Twitter |
@@ -81,6 +120,8 @@ The processed data fed into the models is a value for every minute during the pe
 | language_is_Danish  | float64 | fraction of tweets identified as Danish by Twitter |
 | language_is_Welsh  | float64 | fraction of tweets identified as Welsh by Twitter |
 | language_is_Swedish  | float64 | fraction of tweets identified as Swedish by Twitter |
+| --- | --- | --- |
+| games | --- | --- |
 | --- | --- | --- |
 |game_from_hashtag_ポケモンWordle| float64 | fraction of tweets identified as Pokemon JP from hashtag |
 |game_from_hashtag_Wordle|float64 | fraction of tweets identified as Wordle from hashtag |
@@ -110,6 +151,8 @@ The processed data fed into the models is a value for every minute during the pe
  |game_from_hashtag_Quordle|float64 |  fraction of tweets identified as Quordle from hashtag |
  |game_from_hashtag_ことのはたんご|float64 |  fraction of tweets identified as Kotonoha Wordle from hashtag |
  |game_from_hashtag_NYTimes|float64 | fraction of tweets identified as NYTimes Wordle from hashtag |
+| --- | --- | --- |
+| locations | --- | --- |
 | --- | --- | --- |
 |broad_location_is_USAE | float64 | fraction of tweets whose user reports from USA eastern time |
 |broad_location_is_UK| float64 | fraction of tweets whose user reports from United Kingdom|
