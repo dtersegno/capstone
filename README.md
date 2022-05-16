@@ -47,7 +47,18 @@ Data were gathered using the Twitter API v2.
 
 Gathered Twitter data for the search '🟩 Wordle' For over the first few days of May '22. The inclusion of the green square forces the search to focus on tweets that share the results of Wordle games.
 
-## processed data
+
+
+Repository Structure
+---
+
+Data Acquisition
+    - [1 Twitter Search](./data_acquisition/1_twitter_search.ipynb)
+
+
+
+## processed data -- Data dictionary
+
 The processed data fed into the models is a value for every minute during the period between April 29, 2022 19:46 UTC and May 5, 2022 21:59 UTC.
 
 | name | type | description |
@@ -171,12 +182,15 @@ The processed data fed into the models is a value for every minute during the pe
 | broad_location_is_CO| float64 | fraction of tweets whose user reports from Colombia |
 
 
-## raw data
+## Raw data
 
-Data gathered from Twitter was in response to an API v2 search for '🟩 Wordle', which returns tweets that have at least one green square and one instance of 'Wordle' within their text.
-[Twitter API v2 docs](https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent)
+Data gathered from Twitter was in response to an API v2 search for '🟩 Wordle', which returns tweets that have at least one green square and one instance of 'Wordle' within their text. Details for any of the data in `tweets` or `users` can be found at [Twitter API v2 docs](https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent).
 
-### tweets
+Twitter retrieves tweets and user data in batches of 100-tweets maximum. The data was gathered and collected in batches of about 1000 tweets per file and stored as csvs in the [raw_data folder](#./raw_data). User data associated with the tweets is also saved in that folder.
+
+Separate user data files of the format `users_idfixed_XX.csv` is also stored there. The original user data had an error in saving the unique user id in the correct column. These are that data copied with the format used in the EDA notebook.
+
+### tweets --- Data dictionary
 
 | name | type | description |
 | --- | --- | --- |
@@ -198,7 +212,7 @@ Data gathered from Twitter was in response to an API v2 search for '🟩 Wordle'
 | geo | int | unique geographic location, if shared |
 | withheld | bool | whether the tweet has been withheld for legal demand |
 
-### users
+### users --- Data dictionary
 
 | name | type | description |
 | --- | --- | --- |
