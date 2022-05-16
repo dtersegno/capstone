@@ -92,9 +92,13 @@ Repository Structure
 The repository consists of a top level with five 'core' notebooks:
 
 [Data_acquisition](./1_data_acquisition.ipynb)
+
 [Data cleanup](./2_data_cleanup.ipynb)
+
 [EDA](./3_EDA.ipynb)
+
 [Preprocessing](./4_preprocessing.ipynb)
+
 [Models](./5_models.ipynb)
 
 These notebooks contain the entirety of this project's procedures. Their contents describe the process of gathering data, cleaning and merging it, exploring and fitting it to the neural network models. Anyone interested in understanding the complete data process only needs to follow through these in order. 
@@ -104,16 +108,21 @@ They are not the original notebooks where these procedures were developed. Those
 ### draft notebooks
 
 [data_acquisition/](./data_acquisition/)
+
     - 1_twitter_search.ipynb
         An initial review and practice with gathering tweets and user data
     - 2_data_acquisition.ipynb
         Notebook which gathered tweets and user data in many stages
     - 3_data_cleanup.ipynb
         fixing ids, merging tweets and merging users data
+        
 [EDA/](./EDA/)
+
     - 4_EDA.ipynb
         The first informal exploratory data analysis
+        
 [model/](./model/)
+
     - 1_time_series_arima.ipynb
         A failed attempt to fit tweet rates with an ARIMA model.
     - 2_simple_nn.ipynb
