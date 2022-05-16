@@ -5,7 +5,7 @@ merged_tweets.csv
 resampled_tudf_minute.csv
 merged_data/resampled_tudf_minute.csv
 
-
-model/saved_models/*
+#actually, include the models.
+#model/saved_models/*
 
 .ipynb_checkpoints

@@ -5,10 +5,11 @@ General Assembly DSIR 222 capstone project
 
 ---
 
-This project seeks to predict the rates of Wordle-related tweets posted in early May, 2022, using a neural network trained on previous tweet rates as well as the tweets' contents.
+This project seeks to predict the rates of Wordle-related tweets posted in early May, 2022, using a neural network trained on previous tweet rates as well as the tweets' contents. The best neural network offers a substantial improvement over the naive forecasting model, increasing the $R^2$ score for a linear fit between residuals and true values in a test set from 0.46 to 0.75.
 
-
-# Introduction to Wordle
+---
+Introduction to Wordle
+---
 
 [Wordle](https://www.nytimes.com/games/wordle/index.html) is a new and popular word-guessing game created by Josh Wardle and owned by the NY Times. Players guess a daily 5-letter word in six tries. For each guess, the game reveals whether any of the letters in the guess are in the solution, and whether they are in the same location in the word. Currently, the game is entirely free to play.
 
@@ -31,33 +32,114 @@ There is no suggestion to share to a specific service (such as Twitter, Reddit, 
 The game has spawned a large number of unofficial variants, the most popular of which feature a similar sharing mechanism. The relationship between these and Wordle proper is uncertain. It is possible they draw attention away from the NY Times version, but they also contribute to the activity of an enthusiast community. They also provide awareness of the original game to those who may otherwise not have been aware of its existence.
 
 ---
-
 Problem statement and motivation
 ---
 
 Predict the number of Wordle-related tweets, as well as those for popular Wordle-inspired games, on a minute time scale ten minutes in advance by examining tweets.
 
-Although Wordle is not a bandwidth-intensive game, knowing the rate at which NYTimes servers will receive requests ahead of time will allow the organization to properly allocate resources in anticipation for both seasonal changes and unexpected spikes.
+Although Wordle is not a bandwidth-intensive game, knowing the rate at which NYTimes servers will receive requests ahead of time will allow the organization to properly allocate resources in anticipation for both seasonal changes and unexpected spikes. It would also allow them to monitor the community's activity and relationship with Wordle clones.
 
-
+---
 Data
 ---
 
 Data were gathered using the Twitter API v2. 
 
-Gathered Twitter data for the search '🟩 Wordle' For over the first few days of May '22. The inclusion of the green square forces the search to focus on tweets that share the results of Wordle games.
+Gathered Twitter data for the search '🟩 Wordle' For over the first few days of May '22. The inclusion of the green square forces the search to focus on tweets that share the results of Wordle games. Data dictionaries for the raw and final processed data are at the end of this ReadMe.
 
+The important data were collections of fractions of tweets referring to a specific Wordle variant, written in a particular language, or posted from a certain world region. Most importantly, the data was processed and resampled into a number of tweets made per minute, as well as an interpretation of "legitimate" Wordle tweets.
 
+---
+Models
+---
 
+Over 2000 neural networks were trained on a varying number of the tweet data features, with the total tweet rate as well as the fraction of legitimate Worlde tweets as the two targets. The models included 10-20 minute lagged rates, as well as a few tweet rates from the previous day.
+
+All of the possible parameters for the $3^7$ models are listed here:
+
+| variable | possible values |
+| --- | --- | 
+| number of layers | 1, 2, 3 |
+| early stopping patience | 0, 5, 10 |
+| number of minutes around 24-hour lag to monitor tweet rates | 0, 5, 10 |
+| number of minutes to look at, starting 10 minutes before | 0, 5, 10 |
+| number of top locations frequencies to monitor | 0, 12, 25 |
+| number of top game types frequencies to monitor | 0, 12, 25 |
+| number of top tweet languages frequencies to monitor | 0, 10, 20 |
+
+The final, "best" model is a keras dense Sequential() neural network with three layers, and trained with an EarlyStopping procedure with low patience. It has three non-output layers, 0 or 5 EarlyStopping patience, and the maximum values for all of the above collections of data. The model itself, along wth the other trained models, is saved in the [saved_models](./model/saved_models/) folder as `NN_3_10_10_20_25_25_5`. It produced the following two sets of predictions on the test set at the end of the data, on May 5.
+
+![total tweet rate predictions](./readme_pix/total_predictions.png)
+
+![wordle tweet rate predictions](./readme_pix/wordle_predictions.png)
+
+The $R^2$ values for a linear fit between the residuals and true values were calculated for these models as well as their corresponding naive models. They offered a substantial improvement in forecasting power:
+
+| model | $R^2$ total tweets | $R^2$ wordle fraction |
+| --- | --- | --- |
+| Best trained neural network |  0.748 | 0.548 | 
+| Ten-minute lagged naive model | 0.455 | 0.207 |
+
+This quick to train (less than two minutes!) neural network could be continuously retrained on new tweet data to continue forecasting the near-future number of posts. It could also be extended to cover any topic on twitter with a large number of posts, and expanded to include real-time adjustment of the set and number popular languages, locations, hashtags, or other features trained upon.
+
+---
 Repository Structure
 ---
 
-Data Acquisition
-    - [1 Twitter Search](./data_acquisition/1_twitter_search.ipynb)
 
+### core notebooks
 
+The repository consists of a top level with five 'core' notebooks:
 
-## processed data -- Data dictionary
+[Data_acquisition](./1_data_acquisition.ipynb)
+[Data cleanup](./2_data_cleanup.ipynb)
+[EDA](./3_EDA.ipynb)
+[Preprocessing](./4_preprocessing.ipynb)
+[Models](./5_models.ipynb)
+
+These notebooks contain the entirety of this project's procedures. Their contents describe the process of gathering data, cleaning and merging it, exploring and fitting it to the neural network models. Anyone interested in understanding the complete data process only needs to follow through these in order. 
+
+They are not the original notebooks where these procedures were developed. Those draft notebooks are contained in folders within this top level. Only someone interested in following the development process needs to look at them, where more informal language and notes to self abound. Some cells in these scratch notebooks may not run correctly.
+
+### draft notebooks
+
+[data_acquisition/](./data_acquisition/)
+    - 1_twitter_search.ipynb
+        An initial review and practice with gathering tweets and user data
+    - 2_data_acquisition.ipynb
+        Notebook which gathered tweets and user data in many stages
+    - 3_data_cleanup.ipynb
+        fixing ids, merging tweets and merging users data
+[EDA/](./EDA/)
+    - 4_EDA.ipynb
+        The first informal exploratory data analysis
+[model/](./model/)
+    - 1_time_series_arima.ipynb
+        A failed attempt to fit tweet rates with an ARIMA model.
+    - 2_simple_nn.ipynb
+        An initial neural network fit for practice.
+    - 3_preprocessing.ipynb
+        Prepares data for modeling
+    - 4_models.ipynb
+        Runs fits for 2000+ neural networks
+        
+### data folders
+
+Data are stored in three different folders.
+
+- [raw_data](./raw_data/) contains the numerous .csvs saved by the intial search. These are separated into nearly 600 total csvs for tweets, associated users, and "id-fixed" user data.
+- [merged_data](./merged_data/) contains data merged by the cleanup notebook, ready to be explored in the EDA notebook. It also saves the touched-up, tweet/user merged data set to be sent to preprocessing.
+- [processed_data](./processed_data/) contains the data created in the preprocessing step, ready to be imported by the modeling notebook.
+
+Data dictionaries for the raw_data and processed_data may be found at the bottom of this ReadMe. The merged_data is explored thoroughly in the EDA notebook.
+
+### presentation slides
+
+Two slide decks are contained in this repo, one in [topic_lightning_talk](./topic_lightning_talk/) and one in [final_talk](./final_talk/). The first is a set of short proposals for capstone projects. The second was for a presentation to share the results of the project on May 16, 2022.
+
+---
+Processed data -- Data dictionary
+---
 
 The processed data fed into the models is a value for every minute during the period between April 29, 2022 19:46 UTC and May 5, 2022 21:59 UTC.
 
@@ -181,8 +263,9 @@ The processed data fed into the models is a value for every minute during the pe
 | broad_location_is_CAM| float64 | fraction of tweets whose user reports from Canada mountain time |
 | broad_location_is_CO| float64 | fraction of tweets whose user reports from Colombia |
 
-
-## Raw data
+---
+Raw data --- Data dictionaries
+---
 
 Data gathered from Twitter was in response to an API v2 search for '🟩 Wordle', which returns tweets that have at least one green square and one instance of 'Wordle' within their text. Details for any of the data in `tweets` or `users` can be found at [Twitter API v2 docs](https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent).
 
@@ -190,7 +273,7 @@ Twitter retrieves tweets and user data in batches of 100-tweets maximum. The dat
 
 Separate user data files of the format `users_idfixed_XX.csv` is also stored there. The original user data had an error in saving the unique user id in the correct column. These are that data copied with the format used in the EDA notebook.
 
-### tweets --- Data dictionary
+### tweets
 
 | name | type | description |
 | --- | --- | --- |
@@ -212,7 +295,7 @@ Separate user data files of the format `users_idfixed_XX.csv` is also stored the
 | geo | int | unique geographic location, if shared |
 | withheld | bool | whether the tweet has been withheld for legal demand |
 
-### users --- Data dictionary
+### users
 
 | name | type | description |
 | --- | --- | --- |
@@ -229,39 +312,3 @@ Separate user data files of the format `users_idfixed_XX.csv` is also stored the
 | entities| str (json) | information on any included media or urls |
 | pinned_tweet_id | int | unique identifier for a user's currently pinned tweet |
 | withheld | bool | whether the account has been suspended |
-
----
-Models
----
-
-
----
-Wordle Variants
----
-
-The following is a list of the most popular games mentioned in the set of tweets.
-
-- Multi-Wordle
-    - Dordle (two simultaneous games)
-    - Quordle (four games)
-    - Octordle (eight games)
-    - Duotrigordle (thirty-two games)
-- Popular culture
-    - Heardle (Guess pop song from clips)
-    - Framed (Guess Hollywood film from stills)
-    - WizardingWordle ('Harry Potter' themed)
-- Foreign language
-    - ポケモンWordle ('Pokemon' themed, Japanese)
-    - WordleCAT (Catalan)
-    - вордли (Russian)
-    - 워들/한글 (Korean)
-    - wordleTR (Turkish)
-    - AlWird (Arabic)
-    - WordleGalego (Galacian)
-    - WordleEUS (Basque)
-    - hadesjSlova (Czech)
-    - WORDLE_TAMIL (Tamil)
-    - Enstarsdle ('Enstars' themed, Japanese)
-    - WordleEspañol/wordleES (Spanish)
-    - 嘘wordle/百人一首Wordle (Japanese)
-    - ことのはたんご/kotonoha-tango (Japanese)
